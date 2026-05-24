@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="manifest" href="manifest.json" />
+
+  <title>Kyoiku Wiki</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: #0f172a;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .splash {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      background: #0f172a;
+    }
+
+    .logo {
+      width: 90px;
+      height: 90px;
+      border-radius: 20px;
+      background: white;
+      margin-bottom: 20px;
+    }
+
+    .text {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="splash" id="splash">
+  <div class="logo"></div>
+  <div class="text">Loading Kyoiku Wiki...</div>
+</div>
+
+<script>
+  // Force first paint (fix iOS black screen)
+  window.addEventListener("load", () => {
+
+    setTimeout(() => {
+      // Smooth “transport” after splash
+      window.location.replace(
+        "https://dasccorp.kyoikuportal.com/wiki/Main_Page"
+      );
+    }, 1200);
+
+  });
+</script>
+
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("./service-worker.js");
+  }
+</script>
+
+</body>
+</html>
