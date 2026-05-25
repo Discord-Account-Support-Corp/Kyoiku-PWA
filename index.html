@@ -11,23 +11,24 @@
 <style>
 body{
 margin:0;
-background:#0f172a;
-font-family:Arial,sans-serif;
-color:white;
+height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-height:100vh;
 flex-direction:column;
+background:#0f172a;
+font-family:Arial;
+color:white;
 }
 
-button{
+a{
+text-decoration:none;
+background:white;
+color:#0f172a;
 padding:16px 24px;
-font-size:18px;
-border:none;
 border-radius:12px;
+font-size:18px;
 font-weight:bold;
-cursor:pointer;
 }
 </style>
 </head>
@@ -36,21 +37,13 @@ cursor:pointer;
 
 <h1>Kyoiku Wiki</h1>
 
-<button onclick="openWiki()">
+<a
+href="https://dasccorp.kyoikuportal.com/wiki/Main_Page"
+target="_top"
+rel="noopener"
+>
 Open Wiki
-</button>
-
-<script>
-function openWiki() {
-
-  // FORCE full navigation
-  window.open(
-    "https://dasccorp.kyoikuportal.com/wiki/Main_Page",
-    "_self"
-  );
-
-}
-</script>
+</a>
 
 </body>
 </html>
