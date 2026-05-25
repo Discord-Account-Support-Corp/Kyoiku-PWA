@@ -1,8 +1,8 @@
 {
-  "name": "Kyoiku Wiki",
+  "name": "Kyoiku",
   "short_name": "Kyoiku",
-  "start_url": "./",
   "display": "standalone",
+  "start_url": "./",
   "background_color": "#0f172a",
   "theme_color": "#0f172a"
 }
